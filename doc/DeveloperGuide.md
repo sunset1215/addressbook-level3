@@ -85,8 +85,9 @@ Use case ends.
 1. User requests to list tags
 2. AddressBook shows a list of tags
 3. User requests to edit a specific tag in the list
-4. AddressBook confirms the change with the user
-5. AddressBook applies the change <br>
+4. AddressBook requests for confirmation
+5. User confirms edit request
+6. AddressBook edits the specific tag <br>
 Use case ends.
 
 **Extensions**
@@ -100,11 +101,7 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
-4a. User agress to the change
-
-> Use case resumes at step 5
-
-4b. User declines to the change
+5a. User rejects edit request
 
 > Use case ends
 
