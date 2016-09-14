@@ -1,11 +1,11 @@
 
 
 .text-field {
-    -fx-font-size: 12pt;
-    -fx-font-family: "Arial";
+    -fx-font-size: 14pt;
+    -fx-font-family: "Calibri";
     -fx-font-weight: bold;
-    -fx-text-fill: DodgerBlue;
-    -fx-background-color: beige;
+    -fx-text-fill: maroon;
+    -fx-background-color: cyan;
     -fx-control-inner-background: derive(#1d1d1d,20%);
 }
 
