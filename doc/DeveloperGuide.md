@@ -85,9 +85,10 @@ Use case ends.
 1. User requests to list tags
 2. AddressBook shows a list of tags
 3. User requests to edit a specific tag in the list
-4. AddressBook requests for confirmation
-5. User confirms edit request
-6. AddressBook edits the specific tag <br>
+4. AddressBook checks that the new tag name is not an existing one
+5. AddressBook requests for confirmation
+6. User confirms edit request
+7. AddressBook edits the specific tag <br>
 Use case ends.
 
 **Extensions**
@@ -101,7 +102,12 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
-5a. User rejects edit request
+4a. New tag name exists
+
+> 4a1. AddressBook shows an error message <br>
+  Use case resumes at step 2
+
+6a. User rejects edit request
 
 > Use case ends
 
