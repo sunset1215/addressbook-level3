@@ -117,7 +117,10 @@ Use case ends.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
-5. Should store persons' details of any country
+5. Should store persons' details of any country.
+6. Should include appropriate error handling messages so that users will know how to respond in those situations.
+7. Should backup data every month automatically in case data is lost/corrupted.
+8. Should track errors that occur in a log file for debugging purposes.
 
 ## Appendix D : Glossary
 
