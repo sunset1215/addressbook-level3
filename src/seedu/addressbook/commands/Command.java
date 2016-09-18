@@ -43,7 +43,7 @@ public abstract class Command {
     public abstract CommandResult execute() throws Exception;
     
     /**
-     * Returns true if command changes the data
+     * Returns true if command changes the data when executed successfully
      */
     public abstract boolean isMutating();
 
