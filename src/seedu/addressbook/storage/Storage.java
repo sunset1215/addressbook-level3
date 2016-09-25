@@ -1,6 +1,7 @@
 package seedu.addressbook.storage;
 
 import seedu.addressbook.data.AddressBook;
+import seedu.addressbook.data.exception.IllegalValueException;
 
 public interface Storage {
 
@@ -10,6 +11,15 @@ public interface Storage {
      */
     public static class StorageOperationException extends Exception {
         public StorageOperationException(String message) {
+            super(message);
+        }
+    }
+    
+    /**
+     * Signals that the given file path does not fulfill the storage filepath constraints.
+     */
+    public static class InvalidStorageFilePathException extends IllegalValueException {
+        public InvalidStorageFilePathException(String message) {
             super(message);
         }
     }
@@ -30,6 +40,6 @@ public interface Storage {
     
     public String getFilePath();
     
-    public Storage initialize() throws StorageFile.InvalidStorageFilePathException;
+    public Storage initialize() throws InvalidStorageFilePathException;
     
 }
