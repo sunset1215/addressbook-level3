@@ -133,10 +133,4 @@ public class StorageFile implements Storage {
         return getPath();
     }
 
-    @Override
-    public Storage initialize() throws InvalidStorageFilePathException {
-        Storage storage = new StorageFile();
-        return storage;
-    }
-
 }

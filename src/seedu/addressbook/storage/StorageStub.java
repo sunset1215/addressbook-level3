@@ -68,10 +68,4 @@ public class StorageStub implements Storage {
         return null;
     }
 
-    @Override
-    public Storage initialize() throws InvalidStorageFilePathException {
-        Storage storage = new StorageStub();
-        return storage;
-    }
-
 }

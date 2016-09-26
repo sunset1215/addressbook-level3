@@ -41,6 +41,4 @@ public interface Storage {
 
     public String getFilePath();
 
-    public Storage initialize() throws InvalidStorageFilePathException;
-
 }
