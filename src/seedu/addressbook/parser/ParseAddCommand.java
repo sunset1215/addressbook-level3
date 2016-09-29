@@ -10,7 +10,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 public class ParseAddCommand implements Parser {
-    
+
     @Override
     public Command parseArguments(String arguments) {
         final Matcher matcher = PERSON_DATA_ARGS_FORMAT.matcher(arguments.trim());
@@ -32,7 +32,7 @@ public class ParseAddCommand implements Parser {
                     isPrivatePrefixPresent(matcher.group("isAddressPrivate")),
 
                     getTagsFromArgs(matcher.group("tagArguments"))
-            );
+                    );
         } catch (IllegalValueException ive) {
             return new IncorrectCommand(ive.getMessage());
         }

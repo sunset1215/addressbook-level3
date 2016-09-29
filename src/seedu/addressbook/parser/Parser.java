@@ -16,7 +16,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 public interface Parser {
-    
+
     public static final Pattern PERSON_INDEX_ARGS_FORMAT = Pattern.compile("(?<targetIndex>.+)");
 
     public static final Pattern KEYWORDS_ARGS_FORMAT =
@@ -30,7 +30,7 @@ public interface Parser {
                     + "(?<tagArguments>(?: t/[^/]+)*)"); // variable number of tags
 
     public static ParserMap parsers = new ParserMap().getParserMap();
-    
+
     /**
      * Signals that the user input could not be parsed.
      */
@@ -65,7 +65,7 @@ public interface Parser {
         final Collection<String> tagStrings = Arrays.asList(tagArguments.replaceFirst(" t/", "").split(" t/"));
         return new HashSet<>(tagStrings);
     }
-    
+
     /**
      * Parses the given arguments string as a single index number.
      *
@@ -81,7 +81,7 @@ public interface Parser {
         }
         return Integer.parseInt(matcher.group("targetIndex"));
     }
-    
+
     /**
      * Parses user input into command for execution.
      *
@@ -96,23 +96,23 @@ public interface Parser {
 
         final String commandWord = matcher.group("commandWord");
         final String arguments = matcher.group("arguments");
-        
+
         Parser parser = parsers.get(commandWord);
         if (isNull(parser)) {
             return new HelpCommand();
         }
         Command command = parsers.get(commandWord).parseArguments(arguments);
-        
+
         return command;
     }
-    
+
     /**
      * Returns true if argument is null, which represents that an unknown command was entered
      */
     public static boolean isNull(Parser parser) {
         return parser == null;
     }
-    
+
     public Command parseArguments(String arguments);
-    
+
 }
