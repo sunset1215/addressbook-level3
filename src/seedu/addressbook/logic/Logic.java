@@ -6,7 +6,6 @@ import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.parser.Parser;
 import seedu.addressbook.storage.Storage;
-import seedu.addressbook.storage.StorageFile;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,7 +23,7 @@ public class Logic {
     private List<? extends ReadOnlyPerson> lastShownList = Collections.emptyList();
 
     public Logic() throws Exception{
-        setStorage(new StorageFile());
+        setStorage(Storage.initialise());
         setAddressBook(storage.load());
     }
 
