@@ -1,6 +1,5 @@
 package seedu.addressbook.parser;
 
-import org.junit.Before;
 import org.junit.Test;
 import seedu.addressbook.commands.*;
 import seedu.addressbook.data.exception.IllegalValueException;
@@ -16,13 +15,6 @@ import static org.junit.Assert.*;
 import static seedu.addressbook.common.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
 public class ParserTest {
-
-    private Parser parser;
-
-    @Before
-    public void setup() {
-        parser = new Parser();
-    }
 
     @Test
     public void emptyInput_returnsIncorrect() {
@@ -294,7 +286,7 @@ public class ParserTest {
      * @return the parsed command object
      */
     private <T extends Command> T parseAndAssertCommandType(String input, Class<T> expectedCommandClass) {
-        final Command result = parser.parseCommand(input);
+        final Command result = Parser.parseCommand(input);
         assertTrue(result.getClass().isAssignableFrom(expectedCommandClass));
         return (T) result;
     }

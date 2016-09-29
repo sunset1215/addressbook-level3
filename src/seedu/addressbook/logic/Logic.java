@@ -5,6 +5,7 @@ import seedu.addressbook.commands.CommandResult;
 import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.parser.Parser;
+import seedu.addressbook.parser.Parser;
 import seedu.addressbook.storage.Storage;
 import seedu.addressbook.storage.StorageFile;
 
@@ -61,7 +62,7 @@ public class Logic {
      * @throws Exception if there was any problem during command execution.
      */
     public CommandResult execute(String userCommandText) throws Exception {
-        Command command = new Parser().parseCommand(userCommandText);
+        Command command = Parser.parseCommand(userCommandText);
         CommandResult result = execute(command);
         recordResult(result);
         return result;
