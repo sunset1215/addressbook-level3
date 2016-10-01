@@ -40,8 +40,8 @@ public class Logic {
         this.addressBook = addressBook;
     }
 
-    public String getStorageFilePath() {
-        return storage.getFilePath();
+    public String getStoragePath() {
+        return storage.getStoragePath();
     }
 
     /**
