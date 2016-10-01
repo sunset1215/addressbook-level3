@@ -15,6 +15,10 @@ import seedu.addressbook.commands.HelpCommand;
 import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
+/**
+ * Represents an abstract parser used to parse commands used in the address book.
+ * A parser for new commands should implement this interface.
+ */
 public interface Parser {
 
     public static final Pattern PERSON_INDEX_ARGS_FORMAT = Pattern.compile("(?<targetIndex>.+)");
@@ -113,6 +117,12 @@ public interface Parser {
         return parser == null;
     }
 
+    /**
+     * Parses command arguments into command for execution.
+     *
+     * @param arguments command arguments from parseCommand
+     * @return the command based on the command arguments
+     */
     public Command parseArguments(String arguments);
 
 }

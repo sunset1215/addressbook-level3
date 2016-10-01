@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 import seedu.addressbook.commands.*;
 
+/**
+ * Represents a map of parsers that contains the parser of every command
+ */
 public class ParserMap extends HashMap<String, Parser> {
 
     public ParserMap() {

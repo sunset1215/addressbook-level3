@@ -11,6 +11,9 @@ import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.FindCommand;
 import seedu.addressbook.commands.IncorrectCommand;
 
+/**
+ * Represents a parser that parses FindCommand
+ */
 public class ParseFindCommand implements Parser {
 
     @Override

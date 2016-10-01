@@ -6,6 +6,9 @@ import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.DeleteCommand;
 import seedu.addressbook.commands.IncorrectCommand;
 
+/**
+ * Represents a parser that parses DeleteCommand
+ */
 public class ParseDeleteCommand implements Parser {
 
     @Override

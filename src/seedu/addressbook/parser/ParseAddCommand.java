@@ -9,6 +9,9 @@ import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
+/**
+ * Represents a parser that parses AddCommand
+ */
 public class ParseAddCommand implements Parser {
 
     @Override

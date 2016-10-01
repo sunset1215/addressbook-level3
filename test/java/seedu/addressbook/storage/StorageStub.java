@@ -4,7 +4,7 @@ import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.storage.Storage;
 
 /**
- * Represents an empty implementation of StorageFile used to store address book data for testing purposes
+ * Represents an empty implementation of Storage for testing purposes
  */
 public class StorageStub extends Storage {
 

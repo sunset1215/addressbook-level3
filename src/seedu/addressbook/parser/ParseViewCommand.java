@@ -6,6 +6,9 @@ import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ViewCommand;
 
+/**
+ * Represents a parser that parses ViewCommand
+ */
 public class ParseViewCommand implements Parser {
 
     @Override
